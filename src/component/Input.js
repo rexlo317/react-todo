@@ -12,17 +12,16 @@ export default class Input extends Component {
         this.submit = this.submit.bind(this);
       }
 
-      change(event) {
+      change = (event) => {
         this.setState({value: event.target.value});
       }
 
-      submit(event) {
-          alert(this.state.value)
-        /*this.state.result.push(<List todo = {this.state.value}/>)
+      submit = (event) => {
+        console.log(this.state.value)
         event.preventDefault();
         this.setState({
-            result: this.state.result
-        })*/
+            result: [...this.state.result, this.state.value]
+        })
       }
       
 
